@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std; //introduces namespace std
+int main( void )
+{
+ string theLine;
+ int argc;
+ char* argv[100];
+ // Initialization stuff
+ while (true)
+ {
+ cout << "BobShell> ";
+ getline(cin,theLine);
+ cout << "Command was: " << theLine << endl;
+ if ((theLine == "exit") || cin.eof())
+ {
+exit(0);
+ }
+// Determine the command name, and construct the parameter list
+// argv[0] - command name
+// argv[1] - first parameter
+// argv[2] - second parameter
+// ...
+// argv[N] - Nth parameter
+// argv[N+1] - NULL to indicate end of parameter list
+// Find the full path name for the file
+// Launch the executable file with the specified parameters using
+// the execvp command and the argv array.
+}
